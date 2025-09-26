@@ -2,30 +2,80 @@
 <html>
 <head>
   <title>Welcome to devzucchinibread’s site!</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .map-card {
+      width: 300px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .map-card:hover {
+      transform: scale(1.03);
+    }
+
+    .map-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .map-info {
+      padding: 15px;
+    }
+
+    .map-info h3 {
+      margin: 0 0 10px;
+      color: #aaffaa;
+    }
+
+    .map-info p {
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+  </style>
 </head>
 <body>
-  <header style="background-color: #111; color: #90ee90; padding: 1em; text-align: center;">
-    <h1>devzucchinibread</h1>
-    <p> GIS Dev | Cartographer | Portfolio in Progress</p>
-  </header>
 
-  <main style="padding: 2em; text-align: center;">
-    <h2>🛠️ Under Construction</h2>
-    <p>But I already have some cool maps to show you below!</p>
+  <h1>🗺️ Cartographic Products</h1>
 
-    <!-- Your Baja California map goes here -->
-    <section style="padding: 2em; text-align: center;">
-      <h2 style="font-size: 2em; color: #90ee90;">Cartographic Products</h2>
+  <div class="gallery">
 
-      <div style="margin-top: 3em;">
-        <h3 style="color: #e0ffe0;">The Baja California Peninsula</h3>
-        <p style="max-width: 700px; margin: 0 auto;">
-          A stylized, monochromatic map of the Baja California Peninsula. Created in ArcGIS Pro using vector data from Natural Earth, DEM hillshade from USGS EarthExplorer, and enhanced with custom symbology from Esri’s style gallery. 
-          Final graphics—including the cactus and north arrow—were refined in Adobe Illustrator. This map received <strong>1st Place</strong> at the 2021 California Geographic Society Conference.
-        </p>
-        <p style="font-size: 0.9em; color: #aaa;">Tools used: ArcGIS Pro, Illustrator, EarthExplorer, Natural Earth</p>
-        <img src="images/peninsula_doneso-1.webp" alt="Map of Baja California Peninsula" style="max-width: 90%; border: 1px solid #333; border-radius: 8px; margin-top: 1em;">
+    <div class="map-card">
+      <a href="images/peninsula_doneso-1.webp" target="_blank">
+        <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula">
+      </a>
+      <div class="map-info">
+        <h3>The Baja California Peninsula</h3>
+        <p>A monochromatic map using ArcGIS Pro and Illustrator. Includes stylized symbology, DEM-based hillshade, and vector data from Natural Earth. 🏆 Winner of the 2021 California Geographic Society Cartography Award.</p>
       </div>
-    </section>
-  </main>
+    </div>
+
+    <!-- Add more map-cards here! -->
+
+  </div>
+
 </body>
+</html>
