@@ -1,30 +1,103 @@
-<header style="text-align: center; padding: 2em;">
-  <h1 style="font-family: 'Georgia', serif; font-size: 2.5em; margin-bottom: 0.2em;">Maps By Stevie</h1>
-  <h2 style="font-size: 1.2em; color: #444;">GIS Dev | Cartographer | Portfolio in Progress</h2>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maps by Stevie</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eee;
+    }
+    header {
+      text-align: center;
+      padding: 2em;
+      background: white;
+    }
+    header h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    header h2 {
+      font-size: 1.2em;
+      color: #444;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5em;
+      padding: 2em;
+    }
+    .map-card {
+      text-decoration: none;
+      color: inherit;
+    }
+    .map-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .map-card div {
+      padding: 0.5em 0;
+      background: white;
+      text-align: center;
+    }
+    .map-card .hover-text {
+      font-size: 0.9em;
+      color: #666;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .map-card:hover .hover-text {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DevZucchiniBread</h1>
+    <h2>GIS Dev | Cartographer | Portfolio in Progress</h2>
+  </header>
 
-<!-- Gallery Grid -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5em; padding: 2em; background: #eee;">
+  <div class="gallery">
+    <!-- Baja Map -->
+    <a href="carto projects/baja.html" class="map-card">
+      <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula">
+      <div>
+        <strong>The Baja California Peninsula</strong>
+        <div class="hover-text">Read more →</div>
+      </div>
+    </a>
 
-  <!-- Map 1: Baja -->
-  <a href="carto projects/baja.html">
-    <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula" style="width: 100%; display: block;">
-  </a>
+    <!-- Mission Bay -->
+    <a href="carto projects/missionbay.html" class="map-card">
+      <img src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay">
+      <div>
+        <strong>Map of Mission Bay</strong>
+        <div class="hover-text">Read more →</div>
+      </div>
+    </a>
 
-  <!-- Map 2: Mission Bay -->
-  <a href="carto projects/missionbay.html">
-    <img src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay" style="width: 100%; display: block;">
-  </a>
+    <!-- Grand Canyon -->
+    <a href="carto projects/grandcanyon.html" class="map-card">
+      <img src="images/grand_canyon_northrim.webp" alt="The Grand Canyon">
+      <div>
+        <strong>The Grand Canyon</strong>
+        <div class="hover-text">Read more →</div>
+      </div>
+    </a>
 
-  <!-- Map 3: Grand Canyon -->
-  <a href="carto projects/grandcanyon.html">
-    <img src="images/grand_canyon_northrim.webp" alt="The Grand Canyon" style="width: 100%; display: block;">
-  </a>
-
-  <!-- Map 4: COVID-19 -->
-  <a href="carto projects/covid.html">
-    <img src="images/covid-19-1.png" alt="COVID-19 Map" style="width: 100%; display: block;">
-  </a>
-
-</div>
-
+    <!-- COVID-19 Map -->
+    <a href="carto projects/covid.html" class="map-card">
+      <img src="images/covid-19-1.png" alt="COVID-19 Map">
+      <div>
+        <strong>COVID-19 Map</strong>
+        <div class="hover-text">Read more →</div>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
