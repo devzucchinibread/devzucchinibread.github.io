@@ -118,6 +118,27 @@
     .img-shift-down {
       object-position: center 100%; /* shift focal point downward */
     }
+    footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;  /* optional: dark footer */
+    color: #eee;             /* optional: light text */
+    margin-top: 40px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-logo {
+    height: 60px;      /* smaller than header version */
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
   </style>
 </head>
 <body>
@@ -159,12 +180,6 @@
     </div>
   </div>
 </div>
-  <footer>
-  <div class="footer-content">
-    <img src="images/logo_round_256.png" alt="DevZucchiniBread Logo" class="footer-logo">
-    <p>© 2025 Stevie Rehagen — All Rights Reserved</p>
-  </div>
-</footer>
       <script>
     const nameText = "DevZucchinibread";
     const subtitleText = "GIS Dev | Cartographer | Portfolio in Progress";
@@ -195,5 +210,11 @@
 
     document.addEventListener("DOMContentLoaded", typeTitle);
   </script>
+  <footer>
+  <div class="footer-content">
+    <img src="images/logo_round_256.png" alt="DevZucchiniBread Logo" class="footer-logo">
+    <p>© 2025 Stevie Rehagen — All Rights Reserved</p>
+  </div>
+</footer>
 </body>
 </html>
