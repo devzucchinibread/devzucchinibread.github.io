@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DevZucchinibread</title>
 <style>
   body {
-    font-family: sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Nunito', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
 
   header {
     text-align: center;
@@ -72,10 +73,14 @@
   }
 
   .read-more {
-    opacity: 0;
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 30%;
     font-size: 0.9rem;
     color: #555;
     transition: opacity 0.3s ease;
+    font-weight: 300; /* Lighter text */
+    font-family: 'Nunito', sans-serif;
   }
 
   .card:hover {
@@ -94,11 +99,8 @@
     object-position: 100% center; /* shift focal point to the left */
   }
 
-  .img-shift-up {
-    object-position: center 90%; /* shift focal point downward */
-  }
   .img-shift-down {
-    object-position: center 90%; /* shift focal point downward */
+    object-position: center 100%%; /* shift focal point downward */
   }
 
 
@@ -128,7 +130,7 @@
   </div>
 
   <div class="card" onclick="window.location.href='grand-canyon.html'">
-    <img class="img-shift-up" src="images/grand_canyon_northrim.webp" alt="The Grand Canyon" />
+    <img class="img-shift-down" src="images/grand_canyon_northrim.webp" alt="The Grand Canyon" />
     <div class="card-title">
       The Grand Canyon
       <div class="read-more">Read more →</div>
