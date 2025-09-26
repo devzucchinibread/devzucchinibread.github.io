@@ -90,6 +90,16 @@
   .card:hover .read-more {
     opacity: 1;
   }
+  /* Nudge Mission Bay card slightly to the left */
+  .card.mission-bay {
+    margin-left: -10px;
+}
+
+/* Nudge Grand Canyon card slightly down */
+  .card.grand-canyon {
+    margin-top: 20px;
+}
+
 </style>
 </head>
 <body>
@@ -106,7 +116,7 @@
       <div class="read-more">Read more →</div>
     </div>
   </div>
-
+    
   <div class="card" onclick="window.location.href='mission-bay.html'">
     <img src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay" />
     <div class="card-title">
