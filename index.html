@@ -90,13 +90,17 @@
   .card:hover .read-more {
     opacity: 1;
   }
-  .img-shift-left {
+  .img-shift-right {
     object-position: 100% center; /* shift focal point to the left */
   }
 
+  .img-shift-up {
+    object-position: center 90%; /* shift focal point downward */
+  }
   .img-shift-down {
     object-position: center 90%; /* shift focal point downward */
   }
+
 
 </style>
 </head>
@@ -108,7 +112,7 @@
 
   <div class="gallery">
   <div class="card" onclick="window.location.href='baja-map.html'">
-    <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula" />
+    <img class="img-shift-down" src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula" />
     <div class="card-title">
       The Baja California Peninsula
       <div class="read-more">Read more →</div>
@@ -116,7 +120,7 @@
   </div>
     
   <div class="card" onclick="window.location.href='mission-bay.html'">
-    <img class="img-shift-left" src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay" />
+    <img class="img-shift-right" src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay" />
     <div class="card-title">
       Map of Mission Bay
       <div class="read-more">Read more →</div>
@@ -124,7 +128,7 @@
   </div>
 
   <div class="card" onclick="window.location.href='grand-canyon.html'">
-    <img class="img-shift-down" src="images/grand_canyon_northrim.webp" alt="The Grand Canyon" />
+    <img class="img-shift-up" src="images/grand_canyon_northrim.webp" alt="The Grand Canyon" />
     <div class="card-title">
       The Grand Canyon
       <div class="read-more">Read more →</div>
