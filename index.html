@@ -1,81 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Welcome to devzucchinibread’s site!</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 20px;
-    }
+<header>
+  <h1>devzucchinibread</h1>
+  <h2>GIS Dev | Cartographer | Portfolio in Progress</h2>
+</header>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+<h1 class="section-title">🗺️ Cartographic Products</h1>
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
+<div class="gallery">
 
-    .map-card {
-      width: 300px;
-      background: #1a1a1a;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
-      transition: transform 0.2s;
-    }
-
-    .map-card:hover {
-      transform: scale(1.03);
-    }
-
-    .map-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .map-info {
-      padding: 15px;
-    }
-
-    .map-info h3 {
-      margin: 0 0 10px;
-      color: #aaffaa;
-    }
-
-    .map-info p {
-      font-size: 0.9em;
-      line-height: 1.4;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>🗺️ Cartographic Products</h1>
-
-  <div class="gallery">
-
-    <div class="map-card">
-      <a href="images/peninsula_doneso-1.webp" target="_blank">
-        <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula">
-      </a>
-      <div class="map-info">
-        <h3>The Baja California Peninsula</h3>
-        <p>A monochromatic map using ArcGIS Pro and Illustrator. Includes stylized symbology, DEM-based hillshade, and vector data from Natural Earth. 🏆 Winner of the 2021 California Geographic Society Cartography Award.</p>
-      </div>
-    </div>
-
-    <!-- Add more map-cards here! -->
-
+  <!-- Map 1: Baja -->
+  <div class="map-card">
+    <h3>The Baja California Peninsula</h3>
+    <a href="projects/baja.html">
+      <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula">
+    </a>
   </div>
 
-</body>
-</html>
+  <!-- Map 2: Mission Bay -->
+  <div class="map-card">
+    <h3>Map of Mission Bay</h3>
+    <a href="projects/missionbay.html">
+      <img src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay">
+    </a>
+  </div>
+
+  <!-- Map 3: Grand Canyon -->
+  <div class="map-card">
+    <h3>The Grand Canyon</h3>
+    <a href="projects/grandcanyon.html">
+      <img src="images/grand_canyon_northrim.webp" alt="The Grand Canyon">
+    </a>
+  </div>
+
+  <!-- Map 4: COVID-19 -->
+  <div class="map-card">
+    <h3>COVID-19 Map</h3>
+    <a href="projects/covid.html">
+      <img src="images/covid-19-1.png" alt="COVID-19 Map">
+    </a>
+  </div>
+
+</div>
