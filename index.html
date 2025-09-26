@@ -33,8 +33,8 @@
     color: #777;
   }
     @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+      from { width: 0 }
+      to { width: 100% }
   }
   
   @keyframes blink {
@@ -42,18 +42,20 @@
   }
   
   .typewriter {
-    overflow: hidden;
-    border-right: 2px solid #333;
-    white-space: nowrap;
-    animation: typing 2.5s steps(30, end), blink 0.7s step-end infinite;
-    width: 0;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 2.5rem;
-    color: #333;
-    font-family: 'Nunito', sans-serif;
-  }
+      overflow: hidden;
+      border-right: 2px solid #333;
+      white-space: nowrap;
+      animation: typing 2.5s steps(30, end), blink 0.7s step-end 5;
+      width: 0;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 2.5rem;
+      color: #333;
+    }
 
+    .typewriter.done {
+      border-right: none;
+    }
 
   .gallery {
     display: grid;
@@ -141,14 +143,12 @@
 
 </style>
 </head>
-
 <body>
   <header>
     <h1><span class="typewriter">DevZucchiniBread</span></h1>
-    <h2 id="subtitle">GIS Dev | Cartographer | Portfolio in Progress</h2>
+    <h2 id="subtitle"></h2>
   </header>
 
-  
   <div class="gallery">
   <div class="card" onclick="window.location.href='baja-map.html'">
     <img class="img-shift-down" src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula" />
@@ -184,20 +184,24 @@
 </div>
     <script>
     window.addEventListener('DOMContentLoaded', () => {
-      const subtitle = "GIS Dev | Cartographer | Portfolio in Progress";
-      const target = document.getElementById("subtitle");
+      const titleElement = document.getElementById("title");
+      const subtitleText = "GIS Dev | Cartographer | Portfolio in Progress";
+      const subtitleElement = document.getElementById("subtitle");
       let i = 0;
 
+      // Wait for typing to finish
       setTimeout(() => {
+        titleElement.classList.add("done"); // stop cursor
+
         const interval = setInterval(() => {
-          if (i < subtitle.length) {
-            target.textContent += subtitle.charAt(i);
+          if (i < subtitleText.length) {
+            subtitleElement.textContent += subtitleText.charAt(i);
             i++;
           } else {
             clearInterval(interval);
           }
-        }, 50);
-      }, 2700);
+        }, 50); // speed of subtitle typing
+      }, 2700); // delay until after main title types out
     });
   </script>
 </body>
