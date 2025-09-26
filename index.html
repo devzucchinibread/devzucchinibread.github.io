@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
-  <meta charset="UTF-8" />
-  <title>Maps by Stevie</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
 
-  <style>
-    /* START OF YOUR STYLES */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
 
-    .card {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+  .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+  }
 
-    .card-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.7); /* semi-transparent white */
-      color: #000;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(4px);
-      z-index: 2;
-    }
+  .card-title {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+  }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+  .read-more {
+    opacity: 0;
+    font-size: 0.9rem;
+    color: #555;
+    transition: opacity 0.3s ease;
+  }
 
-    .card:hover .card-title {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    /* END OF YOUR STYLES */
-  </style>
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card:hover .card-title {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover .read-more {
+    opacity: 1;
+  }
+</style>
 </head>
 <body>
   <header>
@@ -64,41 +73,37 @@
   </header>
 
   <div class="gallery">
-    <!-- Baja Map -->
-    <a href="carto projects/baja.html" class="map-card">
-      <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula">
-      <div>
-        <strong>The Baja California Peninsula</strong>
-        <div class="hover-text">Read more →</div>
-      </div>
-    </a>
-
-    <!-- Mission Bay -->
-    <a href="carto projects/missionbay.html" class="map-card">
-      <img src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay">
-      <div>
-        <strong>Map of Mission Bay</strong>
-        <div class="hover-text">Read more →</div>
-      </div>
-    </a>
-
-    <!-- Grand Canyon -->
-    <a href="carto projects/grandcanyon.html" class="map-card">
-      <img src="images/grand_canyon_northrim.webp" alt="The Grand Canyon">
-      <div>
-        <strong>The Grand Canyon</strong>
-        <div class="hover-text">Read more →</div>
-      </div>
-    </a>
-
-    <!-- COVID-19 Map -->
-    <a href="carto projects/covid.html" class="map-card">
-      <img src="images/covid-19-1.png" alt="COVID-19 Map">
-      <div>
-        <strong>COVID-19 Map</strong>
-        <div class="hover-text">Read more →</div>
-      </div>
-    </a>
+  <div class="card" onclick="window.location.href='baja-map.html'">
+    <img src="images/peninsula_doneso-1.webp" alt="The Baja California Peninsula" />
+    <div class="card-title">
+      The Baja California Peninsula
+      <div class="read-more">Read more →</div>
+    </div>
   </div>
+
+  <div class="card" onclick="window.location.href='mission-bay.html'">
+    <img src="images/missionbaymap-3-4.webp" alt="Map of Mission Bay" />
+    <div class="card-title">
+      Map of Mission Bay
+      <div class="read-more">Read more →</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='grand-canyon.html'">
+    <img src="images/grand_canyon_northrim.webp" alt="The Grand Canyon" />
+    <div class="card-title">
+      The Grand Canyon
+      <div class="read-more">Read more →</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="window.location.href='covid-map.html'">
+    <img src="images/covid-19-1.png" alt="COVID-19 Map" />
+    <div class="card-title">
+      COVID-19 Map
+      <div class="read-more">Read more →</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
