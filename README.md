@@ -1,9 +1,9 @@
-DevZucchinibread Portfolio 🌱
+Project Portfolio 🌱
 
 Welcome! This is my personal GIS & cartography portfolio site.
 
 Click here to view the live site:
-[My Website](https://devzucchinibread.github.io/)
+[DevZucchinibread](https://devzucchinibread.github.io/)
 
 This site is where I share:
 
