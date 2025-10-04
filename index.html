@@ -70,23 +70,18 @@
   
     .card-media {
       position: relative;
-      height: 200px;       /* same as your other cards */
+      width: 100%;
+      aspect-ratio: 1 / 1;    /* makes it perfectly square */
       border-radius: 12px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
     
     .card-video {
+      flex: 2;                 /* video takes 2/3 of square */
       width: 100%;
-      height: 70%;         /* video takes 70% of the card height */
-      object-fit: cover;   /* fill space, crops if needed */
-      display: block;
-    }
-    
-    .card-image {
-      width: 100%;
-      height: 30%;         /* lidar fills the rest */
       object-fit: cover;
-      display: block;
     }
     
     .card-image {
