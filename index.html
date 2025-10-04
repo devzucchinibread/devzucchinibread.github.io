@@ -122,12 +122,25 @@
       margin-top: 0.5rem; /* Add space when visible */
     }
     .img-shift-right {
-      object-position: 100% center; /* shift focal point to the left */
+      object-fit: cover;
+      object-position: 100% center; /* prioritize right side */
     }
     
     .img-shift-down {
-      object-position: center 100%; /* shift focal point downward */
+      object-fit: cover;
+      object-position: center 100%; /* prioritize bottom */
     }
+    
+    .img-shift-up {
+      object-fit: cover;
+      object-position: center 0%; /* prioritize top */
+    }
+    
+    .img-shift-left {
+      object-fit: cover;
+      object-position: 0% center; /* prioritize left side */
+    }
+    
     footer {
       text-align: center;
       padding: 15px;
@@ -159,7 +172,7 @@
 
   <div class="gallery">
   <div class="card" onclick="window.location.href='tools/batch-modify-relates.html'">
-    <img class="img-shift-down" src="images/woh_tool_tumbnail.png" alt="Batch Modify Relates Tool" />
+    <img class="img-shift-up" src="images/woh_tool_tumbnail.png" alt="Batch Modify Relates Tool" />
     <div class="card-title">
       Batch Modify Relates Tool
       <div class="read-more">Read more →</div>
