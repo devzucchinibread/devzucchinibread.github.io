@@ -74,7 +74,8 @@
       object-fit: cover;
       display: block;
     }
-  
+
+    
     .card-media {
       position: relative;
       width: 100%;
@@ -94,6 +95,13 @@
       flex: 1;                 /* lidar fills remaining 1/3 */
       width: 100%;
       object-fit: cover;
+    }
+    
+    .stacked-media {
+      width: 100%;
+      height: 50%;      /* each fills half of the card */
+      object-fit: cover; /* makes them crop nicely if needed */
+      display: block;
     }
 
     .card-title {
@@ -195,8 +203,8 @@
   <div class="card" onclick="window.location.href='tools/batch-modify-relates.html'">
     <!-- media block -->
     <div class="card-media">
-      <img src="../images/demo_800.gif" alt="Batch Modify Relates Tool in action" class="card-fill">
-      <img src="images/modifywoh_screenshotcode.png" alt="Batch Modify Relates Tool code" class="card-fill">
+      <img class="img-shift-left" src="../images/demo_800.gif" alt="Batch Modify Relates Tool in action" class="stacked-media">
+      <img src="images/modifywoh_screenshotcode.png" alt="Batch Modify Relates Tool code" class="stacked-media">
     </div>
   
     <!-- title block (sits OUTSIDE card-media) -->
