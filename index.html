@@ -68,23 +68,30 @@
       transition: transform 0.2s ease;
     }
     
+       /* Default card images stay square */
     .card img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       display: block;
     }
-
     
+    /* But stacked-media ignores that */
+    .stacked-media {
+      aspect-ratio: auto !important;  /* cancel the 1:1 rule from .card img */
+      height: 50%;                    /* each takes half of parent square */
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .card-media {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1;    /* makes it perfectly square */;
+      aspect-ratio: 1 / 1;    /* makes it perfectly square */
       overflow: hidden;
       display: flex;
       flex-direction: column;
     }
-    
     .card-video {
       flex: 2;                 /* video takes 2/3 of square */
       width: 100%;
@@ -97,12 +104,6 @@
       object-fit: cover;
     }
     
-    .stacked-media {
-      width: 100%;
-      height: 50%;      /* each fills half of the card */
-      object-fit: cover; /* makes them crop nicely if needed */
-      display: block;
-    }
 
     .card-title {
       width: 100%;
