@@ -83,16 +83,17 @@
     }
     
     .card-video {
-      flex: 2;                /* video takes up more space */
       width: 100%;
-      object-fit: contain;    /* show whole video, no cropping */
-      background: black;      /* fill space if aspect doesn’t match */
+      height: 70%;         /* video takes 70% of the card height */
+      object-fit: cover;   /* fill space, crops if needed */
+      display: block;
     }
     
     .card-image {
-      flex: 1;                /* lidar fills the rest */
       width: 100%;
+      height: 30%;         /* lidar fills the rest */
       object-fit: cover;
+      display: block;
     }
 
     .card-title {
