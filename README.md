@@ -1,13 +1,14 @@
-#Project Portfolio 🌱
+DevZucchinibread Portfolio 🌱
 
-Welcome! This is my personal GIS & cartography portfolio site.
+Welcome to my GIS & cartography portfolio. This site highlights my work in geospatial analysis, automation, and map design.
 
 Click here to view the live site:
 [DevZucchinibread](https://devzucchinibread.github.io/)
 
-This site is where I share:
+What you’ll find here:
 
-- Cartographic projects (maps & visualizations)
-- GIS tools & scripts (ArcPy automation & analytics)
+🗺️ Cartographic Projects – Maps and visualizations built with ArcGIS Pro, Illustrator, and web tools
 
- & ongoing experiments in GIS + coding!
+🛠️ GIS Tools & Scripts – Custom Python/ArcPy automation for data management and analytics
+
+🎥 Experiments & Demos – Interactive visuals, 3D flythroughs, and workflows in progress
