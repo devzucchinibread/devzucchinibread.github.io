@@ -77,18 +77,24 @@
     .card-stack {
       display: flex;
       flex-direction: column;
-      height: 200px;       /* match your other cards */
+      height: 200px;         /* total card height (same as other thumbnails) */
       border-radius: 12px;
       overflow: hidden;
     }
     
-    .card-video,
-    .card-image {
-      flex: 1;             /* each takes half the card */
-      object-fit: cover;   /* fills without stretching */
+    .card-video {
+      height: auto;          /* don’t force it */
+      flex: 0 0 auto;        /* video only takes the space it needs */
       width: 100%;
-      display: block;
+      object-fit: cover;
     }
+    
+    .card-fill {
+      flex: 1;               /* this stretches to fill leftover space */
+      object-fit: cover;
+      width: 100%;
+    }
+
   
     .card-title {
       width: 100%;
@@ -207,7 +213,7 @@
       <video autoplay loop muted playsinline class="card-video">
         <source src="videos/Scene_4_1080 (1).mp4" type="video/mp4">
       </video>
-      <img src="images/lidar_pic.webp" alt="LiDAR snapshot" class="card-image">
+      <img src="images/lidar_pic.webp" alt="LiDAR snapshot" class="card-fill">
     </div>
     <div class="card-title">
       3D Flythrough Animation
