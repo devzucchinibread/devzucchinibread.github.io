@@ -106,9 +106,9 @@
     .card-fill {
       flex: 1;
       width: 100%;
-      object-fit: cover;
-      object-position: bottom;   /* <- anchor from the bottom up */
-      display: block;
+      object-fit: contain;   /* don’t crop, shrink to fit */
+      object-position: center bottom;
+      background-color: #000; 
     }
 
     .card-title {
