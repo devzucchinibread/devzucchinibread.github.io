@@ -77,14 +77,17 @@
     .card-stack {
       display: flex;
       flex-direction: column;
-      height: 300px; /* match your other cards */
+      height: 200px;       /* match your other cards */
+      border-radius: 12px;
+      overflow: hidden;
     }
     
-    .card-video, 
+    .card-video,
     .card-image {
-      flex: 1;
-      object-fit: cover;
-      border-radius: 12px;
+      flex: 1;             /* each takes half the card */
+      object-fit: cover;   /* fills without stretching */
+      width: 100%;
+      display: block;
     }
   
     .card-title {
