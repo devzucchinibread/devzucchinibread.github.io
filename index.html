@@ -75,25 +75,25 @@
       display: block;
     }
     .card-media {
-      height: 200px;          /* fixed height, matches your other thumbnails */
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;    /* makes it perfectly square */
+      border-radius: 12px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      border-radius: 12px;
     }
     
     .card-video {
+      flex: 2;                 /* video takes 2/3 of square */
       width: 100%;
-      height: 70%;         /* video takes 70% of the card height */
-      object-fit: cover;   /* fill space, crops if needed */
-      display: block;
+      object-fit: cover;
     }
     
     .card-image {
+      flex: 1;                 /* lidar fills remaining 1/3 */
       width: 100%;
-      height: 30%;         /* lidar fills the rest */
       object-fit: cover;
-      display: block;
     }
 
     .card-title {
