@@ -74,23 +74,25 @@
       object-fit: cover;
       display: block;
     }
-    .card-stack {
+    .card-media {
+      height: 200px;          /* fixed height, matches your other thumbnails */
       display: flex;
       flex-direction: column;
-      border-radius: 12px;
       overflow: hidden;
+      border-radius: 12px;
     }
     
     .card-video {
+      flex: 2;                /* video takes up more space */
       width: 100%;
-      height: auto;       /* keep full video proportions */
-      display: block;
+      object-fit: contain;    /* show whole video, no cropping */
+      background: black;      /* fill space if aspect doesn’t match */
     }
     
     .card-image {
+      flex: 1;                /* lidar fills the rest */
       width: 100%;
-      height: auto;       /* keep full image proportions */
-      display: block;
+      object-fit: cover;
     }
 
     .card-title {
@@ -206,7 +208,7 @@
   </div>
 
   <div class="card" onclick="window.location.href='carto projects/3d_flythru.html'">
-    <div class="card-stack">
+    <div class="card-media">
       <video autoplay loop muted playsinline class="card-video">
         <source src="videos/Scene_4_1080 (1).mp4" type="video/mp4">
       </video>
