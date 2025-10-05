@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shadows Beneath the Sun: Haunted San Diego</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../favicon_round.png" />
+  <link rel="icon" type="image/png" href="../favicon_round.png">
   <style>
     body {
       font-family: 'Nunito', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
+      color: #333;
     }
 
     header {
@@ -25,7 +26,6 @@
       font-weight: 600;
       font-size: 2.5rem;
       margin: 0;
-      color: #333;
     }
 
     header h2 {
@@ -42,42 +42,38 @@
       text-align: center;
     }
 
-    /* PowerPoint-style frame for StoryMap */
+    /* --- StoryMap embed styling --- */
     .storymap-frame {
-      width: 90%;
-      max-width: 900px;
-      aspect-ratio: 16 / 9;
-      border: 3px solid #ccc;
-      border-radius: 12px;
+      position: relative;
+      padding-bottom: 65%; /* widescreen ratio for "presentation" feel */
+      height: 0;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      display: block;
-      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background-color: #000; /* fills behind map before load */
     }
 
-    iframe {
+    .storymap-frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border: none;
     }
 
-    .description {
-      margin-top: 2rem;
-      text-align: left;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .description h3 {
-      margin-bottom: 0.5rem;
+    .open-link {
+      display: inline-block;
+      margin-top: 1rem;
       font-weight: 600;
-      color: #333;
+      text-decoration: none;
+      color: #444;
+      transition: color 0.3s ease;
     }
 
-    .description p {
-      color: #555;
-      line-height: 1.6;
+    .open-link:hover {
+      color: #000;
+      text-decoration: underline;
     }
 
     .back-link {
@@ -101,26 +97,22 @@
   </header>
 
   <div class="content">
-    <iframe
-      class="storymap-frame"
-      src="https://storymaps.arcgis.com/stories/17d2b8ce7fe04af38a5f275f2d7e2d74?header=false&footer=false"
-      allowfullscreen
-      title="Shadows Beneath the Sun: Haunted San Diego">
-    </iframe>
-
-    <div class="description">
-      <h3>Shadows Beneath the Sun: Haunted San Diego</h3>
-      <p>
-        A haunting exploration of San Diego’s most storied locations where forgotten graves, ghostly echoes, and the weight of history linger just beneath the city’s sunlit charm. 
-        This StoryMap blends narrative, geography, and local lore to reveal how progress has paved over the past and yet..how it refuses to stay buried.
-      </p>
-
-      <h3>Tools Used:</h3>
-      <p>ArcGIS StoryMaps, ArcGIS Online, ArcGIS Pro, Geocoding, Python</p>
+    <div class="storymap-frame">
+      <iframe 
+        src="https://storymaps.arcgis.com/stories/17d2b8ce7fe04af38a5f275f2d7e2d74?cover=false" 
+        title="Shadows Beneath the Sun: Haunted San Diego" 
+        allowfullscreen>
+      </iframe>
     </div>
 
+    <a href="https://storymaps.arcgis.com/stories/17d2b8ce7fe04af38a5f275f2d7e2d74" 
+       target="_blank" 
+       class="open-link">
+      🔗 Open Full StoryMap
+    </a>
+
+    <br>
     <a href="../index.html" class="back-link">← Back to Home</a>
   </div>
 </body>
 </html>
-
